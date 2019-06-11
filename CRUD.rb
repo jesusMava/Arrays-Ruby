@@ -7,7 +7,7 @@ names = [
 ] 
 
 def create(names)
-  puts "---------Insert new---------"
+  puts "---------*Insert new*---------"
   puts "Enter a name:"
   new_name = gets.chomp
   names << new_name
@@ -24,19 +24,20 @@ def read(names)
 end
 
 def update(names)
-  puts "---------update---------"
-  puts"Select one element: "
+  puts "---------*Update*---------"
+  read(names)
+  puts"select one element of above: "
   position = gets.to_i
-  puts names[position]
   puts"enter a name:"
   edit_name = gets.chomp
+  puts "**Successful**"
+  puts "#{names[position]} changed by #{edit_name}"
   names[position] = edit_name
-  puts "**Successful"
   puts "----------------------"  
 end
 
 def delete(names)
-  puts "---------delete---------"
+  puts "---------*Delete*---------"
   read(names)
   puts"Select one element: "
   position = gets.to_i
